@@ -24,6 +24,7 @@ console.log(cb(3, "hh", add));//   ## result 3hh
 
 //opg 4
 console.log(cb(6, 6, mul)) // ## result 2
+
 //opg 5
 
 console.log(cb(1, 2, ()=> 1/2)) // ## result 0.5
@@ -50,6 +51,7 @@ const namesToHtml = function (names) {
     return `<ul>${names.map(name => `<li>${name}</li>`).join('')}</ul>`;
 }
 console.log("Names to HTML: ", namesToHtml(names))
+
 // OPg. 4
 console.log("OPG. 4")
 const cars = [
@@ -62,3 +64,46 @@ const cars = [
 console.log("Cars newer than 1999: ", cars.filter(car => car.year > 1999))
 console.log("All Volvos: ", cars.filter(car => car.make === "Volvo"))
 console.log("All with price below 5000 DOLLARS: ", cars.filter(car => car.price < 5000))
+
+// OPG 5. Asynchronous Callbacks
+
+// const msgPrinter = function(msg,delay){
+//   setTimeout(() => console.log(msg),delay); //Observe an arrow-function
+// };
+// console.log("aaaaaaaaaa");
+// msgPrinter ("bbbbbbbbbb",2000);
+// console.log("dddddddddd");
+// msgPrinter ("eeeeeeeeee",1000);
+// console.log("ffffffffff");
+    // aaaaaaaaaa
+    //dddddddddd
+    //ffffffffff
+    //eeeeeeeeee
+    //bbbbbbbbbb
+
+//JAVASCRIPT OBJECTS
+    
+const pet = {
+    name: "dog",
+    type: "animal",
+        age: 5,
+    weight: 20
+}
+
+console.log("List before deletet")
+for (prop in pet) {
+    
+  console.log(prop, pet[prop])
+}
+
+delete pet.age;
+
+console.log("List before deletet")
+for (prop in pet) {
+    
+  console.log(prop, pet[prop])
+}
+
+
+
+
